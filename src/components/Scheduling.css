@@ -1,0 +1,156 @@
+.scheduling-container {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+  color: white;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* -------- INPUT CARD -------- */
+.input-card {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  margin-bottom: 30px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+.input-table th {
+  padding-bottom: 10px;
+}
+
+.input-table td {
+  padding: 10px;
+}
+
+.input-table input {
+  width: 80px;
+  padding: 6px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* Add Process Button */
+.add-btn {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #06f, #a0f);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.visualize-btn {
+  padding: 10px 25px;
+  background: linear-gradient(90deg, #05f, #9af);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.reset-btn {
+  padding: 10px 25px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* -------- GANTT -------- */
+.gantt-card {
+  margin-top: 30px;
+  background: rgba(255,255,255,0.07);
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.gantt-bar {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.gantt-block {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* Color classes */
+.color-P1 {
+  background: #e63946;
+}
+.color-P2 {
+  background: #ffd60a;
+  color: black;
+}
+.color-P3 {
+  background: #3cb44b;
+}
+
+/* -------- RESULTS -------- */
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* Processes Card */
+.processes-card {
+  background: rgba(255,255,255,0.07);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th {
+  background: linear-gradient(90deg, #09f, #f0f);
+  padding: 10px;
+}
+
+.results-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Average Card */
+.average-card {
+  background: linear-gradient(135deg, #27c, #f0f);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.avg-title {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.avg-number {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

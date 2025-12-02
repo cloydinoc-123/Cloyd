@@ -1,0 +1,176 @@
+/* src/components/Projects.css - Pure CSS Glassmorphism Projects Page */
+.projects-page {
+  min-height: 100vh;
+  background: #0a0a1a;
+  padding: 140px 20px 100px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.projects-title {
+  font-size: 90px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Individual Project Card */
+.project-card {
+  background: rgba(30, 30, 50, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 32px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 35px 70px rgba(96, 165, 250, 0.3);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.project-card.featured {
+  grid-column: span 1;
+}
+
+.project-card.featured:hover {
+  box-shadow: 0 35px 70px rgba(34, 197, 94, 0.4);
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+/* Image Container */
+.project-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.08);
+}
+
+/* Overlay on Hover */
+.project-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.8), rgba(236, 72, 153, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.view-project {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 16px 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.view-project:hover {
+  background: white;
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Project Info */
+.project-info {
+  padding: 30px;
+  text-align: left;
+}
+
+.project-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 10px 0;
+}
+
+.project-category {
+  font-size: 16px;
+  color: #94a3b8;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+}
+
+.view-project-mobile {
+  font-size: 18px;
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  display: none;
+}
+
+.view-project-mobile:hover {
+  color: #93c5fd;
+}
+
+/* Featured Project Special Style */
+.project-card.featured .project-overlay {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.9), rgba(74, 222, 128, 0.8));
+}
+
+.project-card.featured .view-project:hover {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 60px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .view-project {
+    display: none;
+  }
+  .view-project-mobile {
+    display: block;
+  }
+  .project-image {
+    height: 240px;
+  }
+}

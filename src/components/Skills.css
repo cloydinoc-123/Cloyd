@@ -1,0 +1,163 @@
+/* src/components/Skills.css - Pure Glassmorphism Skills Page */
+.skills-page {
+  min-height: 100vh;
+  background: #0a0a1a;
+  color: white;
+  padding: 140px 20px 100px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.skills-title {
+  font-size: 90px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 20px 0;
+  letter-spacing: -2px;
+}
+
+.skills-subtitle {
+  font-size: 24px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Individual Skill Card */
+.skill-card {
+  background: rgba(30, 30, 50, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 28px;
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(139, 92, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+  opacity: 0;
+  transition: opacity 0.4s;
+  border-radius: 28px;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon */
+.skill-icon {
+  margin-bottom: 24px;
+}
+
+.icon-bg {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Icon Colors */
+.figma { background: linear-gradient(135deg, #f24e1e, #a259ff); }
+.ux    { background: linear-gradient(135deg, #ff6bcb, #9d4edd); }
+.tw    { background: linear-gradient(135deg, #06b6d4, #0ea5e9); }
+.js    { background: linear-gradient(135deg, #f7df1e, #f0b90b); color: #000 !important; }
+.next  { background: #000; }
+.ex    { background: linear-gradient(135deg, #6b7280, #374151); }
+.php   { background: linear-gradient(135deg, #8993be, #6c75a0); }
+.react { background: linear-gradient(135deg, #61dafb, #00d8ff); }
+
+/* Skill Name */
+.skill-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: white;
+}
+
+/* Progress Bar */
+.progress-container {
+  height: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 16px 0;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #06ffc8, #8b5cf6, #ec4899);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: width 2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.progress-glow {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skill-percent {
+  font-size: 20px;
+  font-weight: bold;
+  color: #8b5cf6;
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 60px;
+  }
+  .skills-subtitle {
+    font-size: 20px;
+  }
+  .skill-card {
+    padding: 30px 20px;
+  }
+}
