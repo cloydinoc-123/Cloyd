@@ -1,21 +1,28 @@
+/* ===========================
+   NAVIGATION BAR
+=========================== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(15,12,41,0.8);
+  background: rgba(15, 12, 41, 0.8);
   backdrop-filter: blur(16px);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
+/* Logo */
 .nav-logo {
   font-size: 1.8rem;
   font-weight: 700;
   color: white;
 }
 
+/* ===========================
+   NAV LINKS - DESKTOP
+=========================== */
 .nav-links {
   display: flex;
   list-style: none;
@@ -36,7 +43,9 @@
   color: #a855f7;
 }
 
-/* Burger Menu */
+/* ===========================
+   BURGER MENU (HIDDEN DESKTOP)
+=========================== */
 .burger {
   display: none;
   cursor: pointer;
@@ -51,7 +60,9 @@
   transition: all 0.3s ease;
 }
 
-/* Responsive */
+/* ===========================
+   MOBILE MENU
+=========================== */
 @media (max-width: 768px) {
   .nav-links {
     position: fixed;
@@ -59,27 +70,32 @@
     right: 0;
     height: 100vh;
     width: 60%;
-    background: rgba(15,12,41,0.95);
+    background: rgba(15, 12, 41, 0.95);
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
   }
 
+  /* When menu is open */
   .nav-links.active {
     transform: translateX(0%);
   }
 
   .nav-links li {
-    margin: 2rem 0;
+    margin: 0;
   }
 
+  /* Show burger on mobile */
   .burger {
     display: flex;
   }
 
-  /* Animate burger to X when open */
+  /* ===========================
+     BURGER → X ANIMATION
+  =========================== */
   .burger.toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
   }

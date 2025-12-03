@@ -6,18 +6,23 @@ export default function Navigation() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <nav className="navbar">
       <div className="nav-logo">Cloyd Inoc</div>
 
       <ul className={`nav-links ${isOpen ? "active" : ""}`}>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" onClick={closeMenu}>Home</a></li>
+        <li><a href="#about" onClick={closeMenu}>About</a></li>
+        <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+        <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
       </ul>
 
-      <div className="burger" onClick={toggleMenu}>
+      <div
+        className={`burger ${isOpen ? "toggle" : ""}`}
+        onClick={toggleMenu}
+      >
         <div className="line1"></div>
         <div className="line2"></div>
         <div className="line3"></div>
