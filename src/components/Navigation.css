@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .navbar {
   width: 100%;
   position: fixed;
@@ -23,11 +24,46 @@
   list-style: none;
   display: flex;
   gap: 25px;
+=======
+/* ===========================
+   NAVIGATION BAR
+=========================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(15, 12, 41, 0.8);
+  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* ===========================
+   NAV LINKS - DESKTOP
+=========================== */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+>>>>>>> e3615f45aca3eb46eae036e1d8f0049490635257
 }
 
 .nav-links li a {
   color: white;
   text-decoration: none;
+<<<<<<< HEAD
   font-size: 1rem;
   transition: 0.3s;
 }
@@ -63,10 +99,67 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+=======
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #a855f7;
+}
+
+/* ===========================
+   BURGER MENU (HIDDEN DESKTOP)
+=========================== */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* ===========================
+   MOBILE MENU
+=========================== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 60%;
+    background: rgba(15, 12, 41, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* When menu is open */
+  .nav-links.active {
+    transform: translateX(0%);
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  /* Show burger on mobile */
+>>>>>>> e3615f45aca3eb46eae036e1d8f0049490635257
   .burger {
     display: flex;
   }
 
+<<<<<<< HEAD
   .nav-links {
     position: fixed;
     top: 0;
@@ -84,5 +177,18 @@
 
   .nav-links.active {
     right: 0;
+=======
+  /* ===========================
+     BURGER → X ANIMATION
+  =========================== */
+  .burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .burger.toggle .line2 {
+    opacity: 0;
+  }
+  .burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+>>>>>>> e3615f45aca3eb46eae036e1d8f0049490635257
   }
 }
