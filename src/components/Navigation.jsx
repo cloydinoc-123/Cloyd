@@ -1,6 +1,6 @@
 // src/components/Navigation.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 
 export default function Navigation() {
@@ -13,21 +13,30 @@ export default function Navigation() {
     <nav className="navbar">
       <div className="nav-logo">Cloyd Inoc</div>
 
-      {/* Burger Icon */}
+      {/* Burger */}
       <div className={`burger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      {/* Menu Links */}
+      {/* Navigation Links */}
       <ul className={`nav-links ${isOpen ? "active" : ""}`}>
-        <li><Link to="/" onClick={closeMenu}>Home</Link></li>
-        <li><Link to="/about" onClick={closeMenu}>About</Link></li>
-        <li><Link to="/skills" onClick={closeMenu}>Skills</Link></li>
-        <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
-        <li><Link to="/scheduling" onClick={closeMenu}>Scheduling</Link></li>
-        <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+        <li>
+          <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" onClick={closeMenu}>About</NavLink>
+        </li>
+        <li>
+          <NavLink to="/skills" onClick={closeMenu}>Skills</NavLink>
+        </li>
+        <li>
+          <NavLink to="/projects" onClick={closeMenu}>Projects</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
+        </li>
       </ul>
     </nav>
   );
