@@ -300,3 +300,35 @@
     grid-template-columns: 1fr;
   }
 }
+/* Extra small screens for Scheduling page */
+@media (max-width: 480px) {
+  .process-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .process-row input {
+    width: 100%;
+    margin: 0.3rem 0;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .gantt-block {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  .cat-photo {
+    width: 240px;
+    height: 320px;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+  }
+}

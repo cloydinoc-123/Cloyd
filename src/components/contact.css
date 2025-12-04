@@ -119,3 +119,45 @@
   .collaborate-title { font-size: 2.8rem; }
   .photo-container { width: 240px; height: 320px; }
 }
+
+/* Contact Page Mobile */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .contact-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .collaborate-title {
+    font-size: 3rem;
+  }
+
+  .collaborate-text {
+    font-size: 1.1rem;
+  }
+
+  .photo-container {
+    width: 260px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collaborate-title {
+    font-size: 2.2rem;
+  }
+
+  .photo-container {
+    width: 200px;
+    height: 280px;
+  }
+
+  .contact-button {
+    font-size: 1.2rem;
+    padding: 0.9rem 2.5rem;
+  }
+}
