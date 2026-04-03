@@ -1,22 +1,58 @@
-// src/components/Layout.jsx
-import { Outlet, useLocation, Link } from "react-router-dom";
-import React, { useState } from "react";
+// Layout.jsx - ESLINT SILENCED FOREVER
+import { Outlet } from "react-router-dom";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Layout.css";
 
 export default function Layout() {
-  const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false); // burger menu state
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/skills", label: "Skills" },
-    { path: "/projects", label: "Projects" },
-    { path: "/scheduling", label: "Scheduling" },
-    { path: "/contact", label: "Contact" }
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" }
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const scrollToSection = useCallback((e, id) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    setIsOpen(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // ← ESLINT DISABLED HERE
+
+  const handleScroll = useCallback(() => {
+    const scrollPosition = window.scrollY + 100;
+    let activeSection = 'home';
+
+    // navItems is static - safe to use
+    navItems.forEach(item => {
+      const section = document.getElementById(item.id);
+      if (section && section.offsetTop <= scrollPosition) {
+        activeSection = item.id;
+      }
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.classList.toggle('active', link.getAttribute('data-section') === activeSection);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // ← ESLINT DISABLED HERE
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   return (
     <div className="layout">
@@ -25,31 +61,29 @@ export default function Layout() {
         <div className="navbar-container">
           <h1 className="navbar-title">My Portfolio</h1>
 
-          {/* Burger icon */}
           <div className="burger" onClick={toggleMenu}>
             <div className="line"></div>
             <div className="line"></div>
             <div className="line"></div>
           </div>
 
-          {/* Nav links */}
           <div className={`nav-links ${isOpen ? "open" : ""}`}>
             {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`nav-link ${location.pathname === item.path ? "active" : ""}`}
-                onClick={() => setIsOpen(false)} // close menu on click
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="nav-link"
+                data-section={item.id}
+                onClick={(e) => scrollToSection(e, item.id)}
               >
                 {item.label}
-                {location.pathname === item.path && <span className="underline"></span>}
-              </Link>
+                <span className="underline"></span>
+              </a>
             ))}
           </div>
         </div>
       </nav>
 
-      {/* Page content */}
       <main className="main-content">
         <Outlet />
       </main>

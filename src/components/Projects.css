@@ -227,3 +227,30 @@
     display: none;
   }
 }
+/* ADD these styles to END of Projects.css */
+
+/* CLICKABLE PROJECT LINK */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure entire card is clickable on mobile */
+.project-card {
+  cursor: pointer;
+}
+
+/* Smooth link transitions */
+.project-link .project-overlay {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-link .project-overlay {
+  opacity: 1;
+}

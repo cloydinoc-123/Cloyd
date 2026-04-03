@@ -1,3 +1,4 @@
+// Contact.jsx - UPDATE LIKE THIS
 import React from "react";
 import "./contact.css";
 
@@ -26,18 +27,42 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* RIGHT: Your Photo – Same as Home */}
+          {/* RIGHT: Your Photo */}
           <div className="contact-right">
             <div className="photo-container">
               <img 
-                src="/3.jpg" 
+                src="/catkun.jpg" 
                 alt="Cloyd Inoc" 
                 className="contact-photo" 
               />
             </div>
           </div>
 
-        </div>
+        </div> {/* END GRID HERE */}
+
+        {/* FOOTER - NOW PERFECTLY CENTERED */}
+        <footer className="site-footer">
+          <div className="social-icons">
+            <a
+              href="https://facebook.com/cloydinoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon facebook"
+            >
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://github.com/cloydinoc-123"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon github"
+            >
+              <i className="fab fa-github"></i>
+            </a>
+          </div>
+          <p className="copyright">© 2025 Cloyd Inoc. All rights reserved.</p>
+        </footer>
+
       </div>
     </div>
   );

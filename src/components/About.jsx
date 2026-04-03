@@ -33,10 +33,10 @@ export default function About() {
           </p>
 
           <div className="resume-buttons">
-            <a href="/cloyd.pdf" target="_blank" rel="noopener noreferrer" className="btn-view">
+            <a href="/resume.jpg" target="_blank" rel="noopener noreferrer" className="btn-view">
               View Resume
             </a>
-            <a href="/cloyd.pdf" download="Cloyd-Inoc-Resume.pdf" className="btn-download">
+            <a href="/resume.jpg" download="Cloyd-Inoc-resume.jpg" className="btn-download">
               Download Resume
             </a>
           </div>

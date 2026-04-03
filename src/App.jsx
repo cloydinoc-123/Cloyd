@@ -1,27 +1,18 @@
+// App.jsx - COMPLETE REPLACE
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-
 import "./Global.css";
 
 import Layout from "./components/Layout";
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Scheduling from "./components/Scheduling";
-import Contact from "./components/Contact";
+import SinglePageHome from "./components/SinglePageHome";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/scheduling" element={<Scheduling />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<SinglePageHome />} />
+          <Route path="*" element={<SinglePageHome />} /> {/* Catch all routes */}
         </Route>
       </Routes>
     </Router>

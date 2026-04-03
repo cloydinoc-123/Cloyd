@@ -1,0 +1,20 @@
+/* components/SinglePageHome.css */
+.section-wrapper {
+  scroll-margin-top: 120px;
+  min-height: 100vh;
+}
+
+.section-wrapper .page-container {
+  min-height: 100vh;
+  padding: 4rem 1rem;
+}
+
+#home { scroll-margin-top: 120px; }
+#about, #skills, #projects, #contact {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+@media (max-width: 768px) {
+  .section-wrapper { scroll-margin-top: 100px; }
+  .section-wrapper .page-container { padding: 2rem 1rem; }
+}

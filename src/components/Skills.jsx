@@ -3,7 +3,7 @@ import "./Skills.css";
 
 export default function Skills() {
   const skills = [
-    { name: "Figma", percent: 40, icon: "figma" },
+    { name: "Figma", percent: 70, icon: "figma" },
     { name: "UI/UX Design", percent: 25, icon: "ux" },
     { name: "Tailwind CSS", percent: 40, icon: "tw" },
     { name: "JavaScript", percent: 50, icon: "js" },
