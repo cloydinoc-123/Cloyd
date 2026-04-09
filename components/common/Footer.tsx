@@ -6,7 +6,7 @@ const quickLinks = [
   { href: "/projects", label: "Projects" },
 ] as const;
 const contactLinks = [
-  { href: "tel:09758170391", label: "Phone: 123123" },
+  { href: "tel:09758170391", label: "Phone: 09758170391" },
   { href: "https://myaccount.google.com/personal-info?gar=WzEyMF0&hl=en&utm_source=OGB&utm_medium=act", label: "Email" },
   { href: "https://github.com/cloydinoc-123", label: "Github" },
 ] as const;
