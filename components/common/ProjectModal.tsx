@@ -3,8 +3,15 @@
 import Image from "next/image";
 import { X } from "lucide-react";
 
+type Project = {
+    title: string;
+    description: string;
+    image: string;
+    tags: string[];
+};
+
 type ProjectModalProps = {
-    project: any;
+    project: Project | null;
     onClose: () => void;
 };
 

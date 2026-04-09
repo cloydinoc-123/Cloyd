@@ -49,10 +49,10 @@ export function ContactForm() {
 			<div className="grid lg:grid-cols-2 lg:gap-24 gap-12 items-center">
 				<div className="space-y-6">
 					<h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-						Let's Work Together
+						{"Let's Work Together"}
 					</h1>
 					<p className="text-muted-foreground md:text-xl/relaxed">
-						Have a project in mind or just want to chat? Fill out the form or reach out directly. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+						{"Have a project in mind or just want to chat? Fill out the form or reach out directly. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions."}
 					</p>
 
 					<div className="space-y-4 pt-4">

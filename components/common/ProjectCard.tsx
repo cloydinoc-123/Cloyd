@@ -3,8 +3,19 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
+type Project = {
+    title: string;
+    description: string;
+    image: string;
+    tags: string[];
+    links: {
+        github: string;
+        demo: string;
+    };
+};
+
 type ProjectCardProps = {
-    project: any;
+    project: Project;
     onClick: () => void;
 };
 
