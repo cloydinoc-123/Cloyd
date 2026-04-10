@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Facebook, Github, Mail } from "lucide-react";
 import { Section } from "@/components/common/Section";
 
 export function Hero() {
@@ -10,10 +10,10 @@ export function Hero() {
             <div className="flex flex-col items-center lg:items-start justify-center space-y-8">
                 <div className="space-y-4">
                     <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-                        Crafting Basic Web Experiences   
+                        Crafting Basic Web Experiences
                     </h1>
                     <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        I create responsive, elegant web designs that are easy to use and a pleasure to explore.
+                        {"I'm a frontend developer and I create responsive, elegant web designs that are easy to use and a pleasure to explore."}
                     </p>
                 </div>
 
@@ -36,11 +36,11 @@ export function Hero() {
                         <Github className="h-6 w-6" />
                         <span className="sr-only">GitHub</span>
                     </Link>
-                    <Link href="mailto:hello@example.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                        <Linkedin className="h-6 w-6" />
+                    <Link href="https://www.facebook.com/cloyd.inoc.5" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                        <Facebook className="h-6 w-6" />
                         <span className="sr-only">LinkedIn</span>
                     </Link>
-                    <Link href="https://myaccount.google.com/personal-info?gar=WzEyMF0&hl=en&utm_source=OGB&utm_medium=act" className="hover:text-foreground transition-colors">
+                    <Link href="https://myaccount.google.com/personal-info?utm_source=OGB&utm_medium=app" className="hover:text-foreground transition-colors">
                         <Mail className="h-6 w-6" />
                         <span className="sr-only">Email</span>
                     </Link>
@@ -49,10 +49,10 @@ export function Hero() {
 
             <div className="flex justify-center items-center">
                 <Image
-                    src="/doydie.jpg"
+                    src="/doyd.jpg"
                     alt="Coding Environment"
-                    width={450}
-                    height={450}
+                    width={500}
+                    height={500}
                     className="rounded-2xl shadow-2xl object-cover w-full max-w-[500px] aspect-square transform rotate-3 hover:rotate-0 transition-transform duration-500"
                 />
             </div>

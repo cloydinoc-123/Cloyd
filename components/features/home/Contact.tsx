@@ -14,7 +14,7 @@ export function Contact() {
                 </p>
 
                 <Button size="lg" asChild>
-                    <Link href="https://myaccount.google.com/personal-info?gar=WzEyMF0&hl=en&utm_source=OGB&utm_medium=act">
+                    <Link href="https://myaccount.google.com/personal-info?utm_source=OGB&utm_medium=app">
                         <Mail className="mr-1 h-4 w-4" />
                         Message Me
                     </Link>

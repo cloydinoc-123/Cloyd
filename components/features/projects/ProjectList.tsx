@@ -28,7 +28,7 @@ export function ProjectList() {
     return (
         <Section className="space-y-12 min-h-screen">
             <SectionHeading title="All Projects" description="A collection of projects I've built, ranging from web applications to mobile apps and more." />
-
+            
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
                 <div className="flex flex-wrap gap-2">
                     {CATEGORIES.map((category) => (
@@ -57,11 +57,7 @@ export function ProjectList() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {filteredProjects.length > 0 ? (
                     filteredProjects.map((project, index) => (
-                        <ProjectCard
-                            key={index}
-                            project={project}
-                            onClick={() => console.log(`Clicked project: ${project.title}`)} // ✅ required
-                        />
+                        <ProjectCard key={index} project={project} />
                     ))
                 ) : (
                     <div className="col-span-full text-center py-12 text-muted-foreground">

@@ -4,10 +4,18 @@ const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
+  { href: "/blog", label: "Blog" },
 ] as const;
+
+const blogLinks = [
+  { href: "/blog", label: "All posts" },
+  { href: "/blog/category/tech", label: "Tech" },
+  { href: "/blog/category/design", label: "Design" },
+] as const;
+
 const contactLinks = [
   { href: "tel:09758170391", label: "Phone: 09758170391" },
-  { href: "https://myaccount.google.com/personal-info?gar=WzEyMF0&hl=en&utm_source=OGB&utm_medium=act", label: "Email" },
+  { href: "https://myaccount.google.com/personal-info?utm_source=OGB&utm_medium=app", label: "Email" },
   { href: "https://github.com/cloydinoc-123", label: "Github" },
 ] as const;
 
@@ -41,6 +49,23 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Blog */}
+          <div>
+            <h3 className="mb-3 text-sm font-medium text-foreground">Blog</h3>
+            <ul className="space-y-2">
+              {blogLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <h3 className="mb-3 text-sm font-medium text-foreground">Contact</h3>
@@ -59,8 +84,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-
-      
     </footer>
   );
 }

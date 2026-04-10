@@ -1,7 +1,7 @@
 
 import { Section } from "@/components/common/Section";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Mail } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,28 +20,26 @@ export function AboutHero() {
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
                     <Button size="lg" className="group" asChild>
-                        <Link href="/resume.jpg" download>
+                        <Link href="/doydy.jpg" download>
                             <Download className="mr-2 h-4 w-4" />
                             Download Resume
                         </Link>
                     </Button>
                     <Button variant="outline" size="lg" asChild>
-                        <Link href="mailto:hello@example.com">
+                        <Link href="https://myaccount.google.com/personal-info?utm_source=OGB&utm_medium=app">
                             <Mail className="mr-2 h-4 w-4" />
                             Contact Me
                         </Link>
                     </Button>
                 </div>
-                
             </div>
 
             <div className="flex justify-center items-center">
                 <Image
-                    src="/resume.jpg"
+                    src="/doydy.jpg"
                     alt="Coding Environment"
-                    width={450}
-                    height={450}
-                    
+                    width={400}
+                    height={400}
                 />
             </div>
         </Section>
